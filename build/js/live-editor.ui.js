@@ -2351,7 +2351,7 @@ window.LiveEditor = Backbone.View.extend({
 
     // This adds html tags around quoted lines so they can be formatted
     prettify: function prettify(str) {
-        str = str.split("\"");
+        str = str.split(/['"]/g);
         var htmlString = "";
         for (var i = 0; i < str.length; i++) {
             if (str[i].length === 0) {
